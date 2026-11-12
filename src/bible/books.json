@@ -1,0 +1,464 @@
+[
+ {
+  "id": "gen",
+  "num": 1,
+  "name": "Бытие",
+  "chapters": 50,
+  "testament": "ot"
+ },
+ {
+  "id": "exo",
+  "num": 2,
+  "name": "Исход",
+  "chapters": 40,
+  "testament": "ot"
+ },
+ {
+  "id": "lev",
+  "num": 3,
+  "name": "Левит",
+  "chapters": 27,
+  "testament": "ot"
+ },
+ {
+  "id": "num",
+  "num": 4,
+  "name": "Числа",
+  "chapters": 36,
+  "testament": "ot"
+ },
+ {
+  "id": "deu",
+  "num": 5,
+  "name": "Второзаконие",
+  "chapters": 34,
+  "testament": "ot"
+ },
+ {
+  "id": "jos",
+  "num": 6,
+  "name": "Иисуса Навина",
+  "chapters": 24,
+  "testament": "ot"
+ },
+ {
+  "id": "jdg",
+  "num": 7,
+  "name": "Судей",
+  "chapters": 21,
+  "testament": "ot"
+ },
+ {
+  "id": "rut",
+  "num": 8,
+  "name": "Руфь",
+  "chapters": 4,
+  "testament": "ot"
+ },
+ {
+  "id": "1sa",
+  "num": 9,
+  "name": "1 Царств",
+  "chapters": 31,
+  "testament": "ot"
+ },
+ {
+  "id": "2sa",
+  "num": 10,
+  "name": "2 Царств",
+  "chapters": 24,
+  "testament": "ot"
+ },
+ {
+  "id": "1ki",
+  "num": 11,
+  "name": "3 Царств",
+  "chapters": 22,
+  "testament": "ot"
+ },
+ {
+  "id": "2ki",
+  "num": 12,
+  "name": "4 Царств",
+  "chapters": 25,
+  "testament": "ot"
+ },
+ {
+  "id": "1ch",
+  "num": 13,
+  "name": "1 Паралипоменон",
+  "chapters": 29,
+  "testament": "ot"
+ },
+ {
+  "id": "2ch",
+  "num": 14,
+  "name": "2 Паралипоменон",
+  "chapters": 36,
+  "testament": "ot"
+ },
+ {
+  "id": "ezr",
+  "num": 15,
+  "name": "Ездры",
+  "chapters": 10,
+  "testament": "ot"
+ },
+ {
+  "id": "neh",
+  "num": 16,
+  "name": "Неемии",
+  "chapters": 13,
+  "testament": "ot"
+ },
+ {
+  "id": "est",
+  "num": 17,
+  "name": "Есфирь",
+  "chapters": 10,
+  "testament": "ot"
+ },
+ {
+  "id": "job",
+  "num": 18,
+  "name": "Иова",
+  "chapters": 42,
+  "testament": "ot"
+ },
+ {
+  "id": "psa",
+  "num": 19,
+  "name": "Псалтирь",
+  "chapters": 150,
+  "testament": "ot"
+ },
+ {
+  "id": "pro",
+  "num": 20,
+  "name": "Притчи",
+  "chapters": 31,
+  "testament": "ot"
+ },
+ {
+  "id": "ecc",
+  "num": 21,
+  "name": "Екклесиаст",
+  "chapters": 12,
+  "testament": "ot"
+ },
+ {
+  "id": "sng",
+  "num": 22,
+  "name": "Песня Песней",
+  "chapters": 8,
+  "testament": "ot"
+ },
+ {
+  "id": "isa",
+  "num": 23,
+  "name": "Исаия",
+  "chapters": 66,
+  "testament": "ot"
+ },
+ {
+  "id": "jer",
+  "num": 24,
+  "name": "Иеремия",
+  "chapters": 52,
+  "testament": "ot"
+ },
+ {
+  "id": "lam",
+  "num": 25,
+  "name": "Плач Иеремии",
+  "chapters": 5,
+  "testament": "ot"
+ },
+ {
+  "id": "ezk",
+  "num": 26,
+  "name": "Иезекииль",
+  "chapters": 48,
+  "testament": "ot"
+ },
+ {
+  "id": "dan",
+  "num": 27,
+  "name": "Даниил",
+  "chapters": 12,
+  "testament": "ot"
+ },
+ {
+  "id": "hos",
+  "num": 28,
+  "name": "Осия",
+  "chapters": 14,
+  "testament": "ot"
+ },
+ {
+  "id": "jol",
+  "num": 29,
+  "name": "Иоиль",
+  "chapters": 3,
+  "testament": "ot"
+ },
+ {
+  "id": "amo",
+  "num": 30,
+  "name": "Амос",
+  "chapters": 9,
+  "testament": "ot"
+ },
+ {
+  "id": "oba",
+  "num": 31,
+  "name": "Авдий",
+  "chapters": 1,
+  "testament": "ot"
+ },
+ {
+  "id": "jon",
+  "num": 32,
+  "name": "Иона",
+  "chapters": 4,
+  "testament": "ot"
+ },
+ {
+  "id": "mic",
+  "num": 33,
+  "name": "Михей",
+  "chapters": 7,
+  "testament": "ot"
+ },
+ {
+  "id": "nam",
+  "num": 34,
+  "name": "Наум",
+  "chapters": 3,
+  "testament": "ot"
+ },
+ {
+  "id": "hab",
+  "num": 35,
+  "name": "Аввакум",
+  "chapters": 3,
+  "testament": "ot"
+ },
+ {
+  "id": "zep",
+  "num": 36,
+  "name": "Софония",
+  "chapters": 3,
+  "testament": "ot"
+ },
+ {
+  "id": "hag",
+  "num": 37,
+  "name": "Аггей",
+  "chapters": 2,
+  "testament": "ot"
+ },
+ {
+  "id": "zec",
+  "num": 38,
+  "name": "Захария",
+  "chapters": 14,
+  "testament": "ot"
+ },
+ {
+  "id": "mal",
+  "num": 39,
+  "name": "Малахия",
+  "chapters": 4,
+  "testament": "ot"
+ },
+ {
+  "id": "mat",
+  "num": 40,
+  "name": "Матфея",
+  "chapters": 28,
+  "testament": "nt"
+ },
+ {
+  "id": "mrk",
+  "num": 41,
+  "name": "Марка",
+  "chapters": 16,
+  "testament": "nt"
+ },
+ {
+  "id": "luk",
+  "num": 42,
+  "name": "Луки",
+  "chapters": 24,
+  "testament": "nt"
+ },
+ {
+  "id": "jhn",
+  "num": 43,
+  "name": "Иоанна",
+  "chapters": 21,
+  "testament": "nt"
+ },
+ {
+  "id": "act",
+  "num": 44,
+  "name": "Деяния",
+  "chapters": 28,
+  "testament": "nt"
+ },
+ {
+  "id": "jas",
+  "num": 59,
+  "name": "Иакова",
+  "chapters": 5,
+  "testament": "nt"
+ },
+ {
+  "id": "1pe",
+  "num": 60,
+  "name": "1 Петра",
+  "chapters": 5,
+  "testament": "nt"
+ },
+ {
+  "id": "2pe",
+  "num": 61,
+  "name": "2 Петра",
+  "chapters": 3,
+  "testament": "nt"
+ },
+ {
+  "id": "1jn",
+  "num": 62,
+  "name": "1 Иоанна",
+  "chapters": 5,
+  "testament": "nt"
+ },
+ {
+  "id": "2jn",
+  "num": 63,
+  "name": "2 Иоанна",
+  "chapters": 1,
+  "testament": "nt"
+ },
+ {
+  "id": "3jn",
+  "num": 64,
+  "name": "3 Иоанна",
+  "chapters": 1,
+  "testament": "nt"
+ },
+ {
+  "id": "jud",
+  "num": 65,
+  "name": "Иуды",
+  "chapters": 1,
+  "testament": "nt"
+ },
+ {
+  "id": "rom",
+  "num": 45,
+  "name": "Римлянам",
+  "chapters": 16,
+  "testament": "nt"
+ },
+ {
+  "id": "1co",
+  "num": 46,
+  "name": "1 Коринфянам",
+  "chapters": 16,
+  "testament": "nt"
+ },
+ {
+  "id": "2co",
+  "num": 47,
+  "name": "2 Коринфянам",
+  "chapters": 13,
+  "testament": "nt"
+ },
+ {
+  "id": "gal",
+  "num": 48,
+  "name": "Галатам",
+  "chapters": 6,
+  "testament": "nt"
+ },
+ {
+  "id": "eph",
+  "num": 49,
+  "name": "Ефесянам",
+  "chapters": 6,
+  "testament": "nt"
+ },
+ {
+  "id": "php",
+  "num": 50,
+  "name": "Филиппийцам",
+  "chapters": 4,
+  "testament": "nt"
+ },
+ {
+  "id": "col",
+  "num": 51,
+  "name": "Колоссянам",
+  "chapters": 4,
+  "testament": "nt"
+ },
+ {
+  "id": "1th",
+  "num": 52,
+  "name": "1 Фессалоникийцам",
+  "chapters": 5,
+  "testament": "nt"
+ },
+ {
+  "id": "2th",
+  "num": 53,
+  "name": "2 Фессалоникийцам",
+  "chapters": 3,
+  "testament": "nt"
+ },
+ {
+  "id": "1ti",
+  "num": 54,
+  "name": "1 Тимофею",
+  "chapters": 6,
+  "testament": "nt"
+ },
+ {
+  "id": "2ti",
+  "num": 55,
+  "name": "2 Тимофею",
+  "chapters": 4,
+  "testament": "nt"
+ },
+ {
+  "id": "tit",
+  "num": 56,
+  "name": "Титу",
+  "chapters": 3,
+  "testament": "nt"
+ },
+ {
+  "id": "phm",
+  "num": 57,
+  "name": "Филимону",
+  "chapters": 1,
+  "testament": "nt"
+ },
+ {
+  "id": "heb",
+  "num": 58,
+  "name": "Евреям",
+  "chapters": 13,
+  "testament": "nt"
+ },
+ {
+  "id": "rev",
+  "num": 66,
+  "name": "Откровение",
+  "chapters": 22,
+  "testament": "nt"
+ }
+]

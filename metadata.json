@@ -1,0 +1,6 @@
+{
+  "name": "Наизусть — Заучивание стихов Библии",
+  "description": "Приложение для заучивания библейских стихов наизусть с интервальными повторениями и разнообразными упражнениями.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
