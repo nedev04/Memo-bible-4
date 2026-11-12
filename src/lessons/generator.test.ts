@@ -416,13 +416,20 @@ describe('ввод по памяти внутри урока', () => {
   const learning = (n: number, strength: number) => verse(n, { strength, stage: 2, nextReviewAt: T0 + 5 * DAY })
   const typingOf = (steps: LessonStep[]) => steps.filter((s) => s.kind === 'typing')
 
-  it('ровно один раз за урок и в самом конце', () => {
+  it('показывается не в каждом уроке, а если есть — в самом конце', () => {
     const verses = [learning(7, 3), learning(8, 4), learning(20, 2), verse(30)]
+    let count = 0
     for (let i = 1; i <= 40; i++) {
       const steps = planLesson(verses, T0, seeded(i))
-      expect(typingOf(steps)).toHaveLength(1)
-      expect(steps[steps.length - 1].kind).toBe('typing')
+      const typing = typingOf(steps)
+      expect(typing.length).toBeLessThanOrEqual(1)
+      if (typing.length === 1) {
+        expect(steps[steps.length - 1].kind).toBe('typing')
+        count++
+      }
     }
+    expect(count).toBeGreaterThan(0)
+    expect(count).toBeLessThan(40)
   })
 
   it('его нет, пока нет стихов, которые можно вводить (сила ниже 2)', () => {
@@ -432,8 +439,10 @@ describe('ввод по памяти внутри урока', () => {
   it('иногда один стих, иногда два, иногда три подряд из одной главы', () => {
     const verses = [learning(7, 3), learning(8, 3), learning(9, 3), learning(10, 3)]
     const counts = new Set<number>()
-    for (let i = 1; i <= 100; i++) {
-      const [typing] = typingOf(planLesson(verses, T0, seeded(i)))
+    for (let i = 1; i <= 200; i++) {
+      const typings = typingOf(planLesson(verses, T0, seeded(i)))
+      if (typings.length === 0) continue
+      const typing = typings[0]
       counts.add(typing.verseKeys.length)
       const numbers = typing.verseKeys.map((k) => Number(k.split(':')[3]))
       numbers.forEach((n, idx) => idx > 0 && expect(n).toBe(numbers[idx - 1] + 1)) // подряд, по возрастанию
@@ -443,9 +452,10 @@ describe('ввод по памяти внутри урока', () => {
 
   it('соседние стихи с силой ниже 2 в ввод по памяти не попадают', () => {
     const verses = [learning(7, 3), verse(8, { strength: 1, stage: 1, nextReviewAt: T0 + DAY })]
-    for (let i = 1; i <= 40; i++) {
-      const [typing] = typingOf(planLesson(verses, T0, seeded(i)))
-      expect(typing.verseKeys).toEqual(['rst:mat:5:7'])
+    for (let i = 1; i <= 60; i++) {
+      const typings = typingOf(planLesson(verses, T0, seeded(i)))
+      if (typings.length === 0) continue
+      expect(typings[0].verseKeys).toEqual(['rst:mat:5:7'])
     }
   })
 
@@ -459,11 +469,17 @@ describe('ввод по памяти внутри урока', () => {
   })
 
   it('сложность для роста силы: с подсказками — 2, с чистого листа — 3', () => {
-    const typing = (strength: number) => planLesson([learning(7, strength)], T0, seeded(1)).filter((s) => s.kind === 'typing')[0]
-    expect(typing(3).settings.visiblePct).toBe(35)
-    expect(stepTier(typing(3))).toBe(2)
-    expect(typing(4).settings.visiblePct).toBe(0)
-    expect(stepTier(typing(4))).toBe(3)
+    let seed3 = 1
+    while (typingOf(planLesson([learning(7, 3)], T0, seeded(seed3))).length === 0) seed3++
+    const typing3 = typingOf(planLesson([learning(7, 3)], T0, seeded(seed3)))[0]
+    expect(typing3.settings.visiblePct).toBe(35)
+    expect(stepTier(typing3)).toBe(2)
+
+    let seed4 = 1
+    while (typingOf(planLesson([learning(7, 4)], T0, seeded(seed4))).length === 0) seed4++
+    const typing4 = typingOf(planLesson([learning(7, 4)], T0, seeded(seed4)))[0]
+    expect(typing4.settings.visiblePct).toBe(0)
+    expect(stepTier(typing4)).toBe(3)
   })
 
   it('число стихов выбирается: чаще один, реже три', () => {

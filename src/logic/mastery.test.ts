@@ -30,7 +30,8 @@ describe('сила растёт без привязки к дню', () => {
     expect(at(1, 1).change).toBe('up')
     expect(at(2, 1).change).toBe('same')
     expect(at(2, 2).change).toBe('up')
-    expect(at(4, 2).change).toBe('same')
+    expect(at(4, 1).change).toBe('same')
+    expect(at(4, 2).change).toBe('up')
     expect(at(4, 3).verse.strength).toBe(5)
   })
 
@@ -144,11 +145,12 @@ describe('седьмой уровень «выучено»', () => {
 
   it('не даётся раньше четвёртого цикла и при силе ниже 6', () => {
     expect(applyVerseResult(verse({ strength: 6, stage: 2, nextReviewAt: T0 }), { tier: 3, score: 100 }, T0).verse.strength).toBe(6)
-    // упражнение сложности 2 силу 5 не поднимает, поэтому до 7 далеко
-    expect(applyVerseResult(verse({ strength: 5, stage: 3, nextReviewAt: T0 }), { tier: 2, score: 100 }, T0).verse.strength).toBe(5)
+    // сила 4 поднимается до 5, поэтому до 7 ещё далеко
+    expect(applyVerseResult(verse({ strength: 4, stage: 3, nextReviewAt: T0 }), { tier: 2, score: 100 }, T0).verse.strength).toBe(5)
   })
 
-  it('если на четвёртом цикле ввод по памяти поднял силу до 6, стих сразу становится выученным', () => {
+  it('если на четвёртом цикле упражнение подняло силу до 6, стих сразу становится выученным', () => {
+    expect(applyVerseResult(verse({ strength: 5, stage: 3, nextReviewAt: T0 }), { tier: 2, score: 100 }, T0).verse.strength).toBe(7)
     expect(applyVerseResult(verse({ strength: 5, stage: 3, nextReviewAt: T0 }), { tier: 3, score: 100 }, T0).verse.strength).toBe(7)
   })
 

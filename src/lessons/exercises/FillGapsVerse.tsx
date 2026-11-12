@@ -80,7 +80,7 @@ export default function FillGapsVerse({ verse, settings, onAnswer }: StepProps) 
         <div className="reveal-bar col">
           <div className="options">
             {gaps[cur].options.map((o) => (
-              <button key={o} className="btn ghost" onClick={() => choose(o)}>{o}</button>
+              <button key={o} className="gap-option-btn" onClick={() => choose(o)}>{o}</button>
             ))}
           </div>
           <span className="counter">{solved.filter(Boolean).length} / {gaps.length}</span>

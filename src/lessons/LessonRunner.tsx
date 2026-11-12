@@ -183,7 +183,7 @@ export default function LessonRunner({
       </div>
 
       <h1 className="lesson-title">
-        {KIND_TITLE[step.kind]}
+        <span className="lesson-title-text">{KIND_TITLE[step.kind]}</span>
         {(KIND_SHOWS_REF[step.kind] || step.retry) && (
           <span className="lesson-ref-badge">
             {[KIND_SHOWS_REF[step.kind] ? stepRef(verses) : '', step.retry ? 'повтор' : ''].filter(Boolean).join(' · ')}

@@ -286,7 +286,10 @@ export function planLesson(
   out.push(...shuffle(fresh.flatMap((v) => easyPractice(v, rng, ctx)), rng))
   for (const v of picked.filter((x) => x.strength > 0)) out.push(...reviewSteps(v, pool, rng, now, ctx))
 
-  const typing = typingStep(pool, new Set(picked.map((v) => v.key)), now, rng)
-  if (typing) out.push(typing)
+  // Ввод по памяти показывается реже, не обязательно в каждом уроке
+  if (rng() < 0.35) {
+    const typing = typingStep(pool, new Set(picked.map((v) => v.key)), now, rng)
+    if (typing) out.push(typing)
+  }
   return toSteps(out)
 }

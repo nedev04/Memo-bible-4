@@ -18,7 +18,12 @@ export default function RevealVerse({ verse, settings, onAnswer }: StepProps) {
       <div className="reveal-text">
         {shown === 0 && <p className="hint">Касайтесь экрана, чтобы стих открывался по частям.</p>}
         {chunks.slice(0, shown).map((c, i) => (
-          <span key={i} className={i === shown - 1 && !done ? 'fresh' : undefined}>{c}{' '}</span>
+          <span
+            key={i}
+            className={`reveal-chunk ${i === shown - 1 && !done ? 'fresh' : ''}`}
+          >
+            {c}
+          </span>
         ))}
       </div>
       <div className="reveal-bar" onClick={(e) => e.stopPropagation()}>

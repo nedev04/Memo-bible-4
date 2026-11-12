@@ -25,7 +25,7 @@ export default function PartialVerse({ verse, settings, onAnswer }: StepProps) {
   }
 
   return (
-    <div className="exwrap">
+    <div className="exwrap exwrap-partial">
       <p className="hint">Прочитайте стих вслух. Коснитесь скрытого слова, чтобы увидеть его на секунду.</p>
 
       <WordFlow
